@@ -16,6 +16,10 @@ public class Main {
 		System.out.println("Addition : " + add.calculate(a, b));
 		System.out.println("Multiplication : " + mul.calculate(a, b));
 		System.out.println("Division : " + div.calculate(a, b));
+		
+		IMathFunction.print(a, b, "addition", add);
+		IMathFunction.print(a, b, "multiplication", mul);
+		IMathFunction.print(a, b, "division", div);
 	}
 
 }
