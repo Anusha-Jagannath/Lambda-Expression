@@ -20,6 +20,8 @@ public class Main {
 		IMathFunction.print(a, b, "addition", add);
 		IMathFunction.print(a, b, "multiplication", mul);
 		IMathFunction.print(a, b, "division", div);
+		
+		IterationDemo.printNumbers();
 	}
 
 }
