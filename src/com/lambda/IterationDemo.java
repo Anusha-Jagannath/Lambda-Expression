@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 /**
  * IterationDemo class contains static method printNumbers to print list
@@ -44,5 +46,18 @@ public class IterationDemo {
 			System.out.println("Method5: forEach lambda imple value " + t);
 		});
 
+		// method 6: implicit lambda function to print double values
+		Function<Integer, Double> doubleFunction = Integer::doubleValue;
+		integers.forEach(n -> {
+			System.out.println("Method5: forEach lambda double value :: " + doubleFunction.apply(n));
+		});
+
+		// method 7: Implicit lambda function to print even no
+		Predicate<Integer> isEvenFunction = n -> n % 2 == 0;
+		integers.forEach(n -> {
+			System.out.println("Method5: forEach value of: " + n + " check for even: " + isEvenFunction.test(n));
+		});
+
 	}
+
 }
